@@ -4,18 +4,23 @@ body {
   margin: 0;
 }
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 0 70px;
   font-family: Roboto, sans-serif;
 }
 header {
   display: flex;
   align-items: center;
+  box-sizing: border-box;
   justify-content: space-between;
   height: 11vh;
   box-shadow: 5px 2px 6px -4px #e7e7e7, -5px 2px 6px -4px #e7e7e7;
   padding: 0 20px;
   border-radius: 3px;
   margin: 0;
+  width: 90%;
 }
 .header-left-side > h2 {
   font-weight: 500;
@@ -50,7 +55,12 @@ button:hover {
   background-color: #ec6528;
   color: white;
 }
-
+main {
+  width: 90%;
+}
+footer {
+  width: 90%;
+}
 .hero {
   display: flex;
   align-items: center;
@@ -135,21 +145,51 @@ button:hover {
   display: flex;
   flex-direction: column;
   padding: 50px 0;
+  align-items: center;
+}
+.service > h3 {
+  color: #cccccc;
+  margin: 0%;
+  font-size: 1.7em;
+}
+.service > h2 {
+  font-size: 2rem;
+  position: relative;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+.service > h2::before {
+  content: "";
+  width: 65px;
+  height: 3px;
+  background-color: #ec6528;
+  position: absolute;
+  bottom: -6px;
+  left: 255px;
 }
 .service-boxes {
   display: flex;
   justify-content: space-around;
+}
+.service-boxes-box > h3 {
+  white-space: nowrap;
 }
 .service-boxes-box > h3,
 .service-boxes-box > p {
   margin: 0px 0px;
   margin-top: 20px;
 }
-.service-boxes-box > svg {
+.service-svg-fill {
   width: 40px;
   height: auto;
 
   fill: #ec6528;
+}
+.service-svg-stroke {
+  width: 40px;
+  height: auto;
+
+  stroke: #ec6528;
 }
 .service-boxes-box {
   box-sizing: border-box;
@@ -167,4 +207,53 @@ button:hover {
 }
 .service-boxes-box:hover {
   border-bottom: 7px solid #ec6528;
+}
+.portfolio {
+  display: flex;
+  flex-direction: column;
+}
+.portfolio-links {
+  gap: 15px;
+  display: flex;
+}
+.portfolio-links > p {
+  user-select: none;
+  cursor: pointer;
+}
+.portfolio-links > p:focus {
+  color: #ec6528;
+}
+.portfolio-img {
+  z-index: 0;
+  width: 100%;
+  height: auto;
+  transition: transform 0.2s ease-in-out;
+}
+.after {
+  position: relative;
+  overflow: hidden;
+}
+.portfolio-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 18px;
+}
+.after::after {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  content: "App";
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  right: -100%;
+  top: 0;
+  background-color: rgba(230, 230, 230, 1);
+
+  transition: right 0.2s ease-in-out;
+}
+.after:hover::after {
+  right: 0;
 }
