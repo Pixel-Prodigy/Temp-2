@@ -4,18 +4,22 @@ body {
   margin: 0;
 }
 body {
-  padding: 0 50px;
+  padding: 0 70px;
   font-family: Roboto, sans-serif;
 }
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 6vh;
+  height: 11vh;
   box-shadow: 5px 2px 6px -4px #e7e7e7, -5px 2px 6px -4px #e7e7e7;
   padding: 0 20px;
   border-radius: 3px;
   margin: 0;
+}
+.header-left-side > h2 {
+  font-weight: 500;
+  font-size: 2rem;
 }
 .header-right-side {
   display: flex;
@@ -23,7 +27,7 @@ header {
   gap: 35px;
 }
 .header-right-side > a {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 a {
   color: black;
@@ -51,8 +55,9 @@ button:hover {
   display: flex;
   align-items: center;
   box-sizing: border-box;
+  flex-wrap: wrap;
   background-color: #fef8f5;
-  height: 88vh;
+  height: 80vh;
   width: 100%;
   margin: 0;
   justify-content: space-between;
@@ -75,7 +80,7 @@ button:hover {
   width: 35%;
 }
 .hero-heading {
-  font-size: 3.5rem;
+  font-size: 2.8rem;
   margin: 0;
 }
 .hero-img {
@@ -83,7 +88,7 @@ button:hover {
   width: 45%;
 }
 .hero-button:hover {
-  background-color: white;
+  background-color: #fef8f5;
   color: #ec6528;
   border: 1px solid #ec6528;
 }
@@ -93,6 +98,7 @@ button:hover {
   justify-content: space-between;
   width: 100%;
   margin-top: 70px;
+  flex-wrap: wrap;
 }
 .about-us-text {
   width: 40%;
@@ -125,4 +131,40 @@ button:hover {
   stroke: #ec6528;
 }
 .service {
+  background-color: #fef8f5;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0;
+}
+.service-boxes {
+  display: flex;
+  justify-content: space-around;
+}
+.service-boxes-box > h3,
+.service-boxes-box > p {
+  margin: 0px 0px;
+  margin-top: 20px;
+}
+.service-boxes-box > svg {
+  width: 40px;
+  height: auto;
+
+  fill: #ec6528;
+}
+.service-boxes-box {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 22%;
+  height: fit-content;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px -20px black;
+  border-bottom: 7px solid #d3d3d3;
+  transition: border-bottom ease 0.4s;
+  padding: 40px 30px;
+}
+.service-boxes-box:hover {
+  border-bottom: 7px solid #ec6528;
 }
