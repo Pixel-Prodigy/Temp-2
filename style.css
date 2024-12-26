@@ -1,21 +1,23 @@
+* {
+  scroll-behavior: smooth;
+}
 html,
 body {
   padding: 0;
   margin: 0;
 }
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 70px;
+.app {
   font-family: Roboto, sans-serif;
+  max-width: 1080px;
+  padding: 0 20px;
+  margin: 0 auto;
 }
 header {
   display: flex;
   align-items: center;
   box-sizing: border-box;
   justify-content: space-between;
-  height: 11vh;
+  padding: 10px 0;
   box-shadow: 5px 2px 6px -4px #e7e7e7, -5px 2px 6px -4px #e7e7e7;
   padding: 0 20px;
   border-radius: 3px;
@@ -67,11 +69,11 @@ footer {
   box-sizing: border-box;
   flex-wrap: wrap;
   background-color: #fef8f5;
-  height: 80vh;
   width: 100%;
+
   margin: 0;
   justify-content: space-between;
-  padding: 0 30px;
+  padding: 100px 30px;
 }
 .hero-text > p {
   font-size: large;
@@ -153,13 +155,17 @@ footer {
   margin: 0%;
   font-size: 1.7em;
 }
-.service > h2 {
+.service > h2,
+.portfolio > h2,
+.faq > h2 {
   font-size: 2rem;
   position: relative;
   margin-bottom: 50px;
   margin-top: 20px;
 }
-.service > h2::before {
+.service > h2::before,
+.portfolio > h2::before,
+.faq > h2::before {
   content: "";
   width: 65px;
   height: 3px;
@@ -212,6 +218,8 @@ footer {
 .portfolio {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
 }
 .portfolio-links {
   gap: 15px;
@@ -257,4 +265,46 @@ footer {
 }
 .after:hover::after {
   right: 0;
+}
+.portfolio > h2::before {
+  left: 225px;
+}
+.portfolio > h3,
+.faq > h3 {
+  color: #cccccc;
+  margin: 0%;
+  font-size: 1.7rem;
+}
+.faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 35px;
+  background-color: #fef8f5;
+  padding-top: 40px;
+}
+.faq > h2::before {
+  left: 185px;
+}
+.faq > h2 {
+  margin-bottom: 30px;
+  margin-top: 15px;
+}
+.faq-q {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.foq-qs-parent {
+  position: relative;
+  z-index: 0;
+}
+.fq-qs-parent::after {
+  position: absolute;
+  content: "Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.";
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: black;
 }
